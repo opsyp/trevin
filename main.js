@@ -13,3 +13,8 @@ let username = id("username"),
   errorMsg = classes("error"),
   successIcon = classes("success-icon"),
   failureIcon = classes("failure-icon");
+
+//Form Submission
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
