@@ -17,4 +17,32 @@ let username = id("username"),
 //Form Submission
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  validationEngine(username, 0, "Username cannot be blank");
+  validationEngine(email, 1, "E-mail cannot be blank");
+  validationEngine(password, 2, "Password cannot be blank");
 });
+
+/**
+ *
+ * id will target id's
+ * serial will target classes [error class, success and failure icons]
+ * message will print a message inside .error class
+ */
+let validationEngine = (id, serial, message) => {
+  if (id.value.trim() === "") {
+    errorMsg[serial].innerHtml = message;
+    id.style.border = "2px solid red";
+
+    // icons
+    failureIcon[serial].style.opacity = "1";
+    successIcon[serial].style.opacity = "0";
+  } else {
+    errorMsg[serial].innerHtml = "";
+    id.style.border = "2px solid green";
+
+    // icons
+    failureIcon[serial].style.opacity = "0";
+    successIcon[serial].style.opacity = "1";
+  }
+};
