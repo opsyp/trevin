@@ -12,11 +12,6 @@ body {
   font-family: sans-serif;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -140,4 +135,68 @@ span {
 .btn-2 {
   background-color: #4f70b5;
   color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f2796e;
+  width: 55%;
+  min-height: 100vh;
+  padding: 10px 20px;
+}
+
+form {
+  width: 45%;
+  max-width: none;
+}
+
+.image {
+  background-image: url("https://svgshare.com/i/_gZ.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  /* border: 2px solid black; */
+  height: 65%;
+}
+
+.text {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+form {
+  width: 45%;
+  max-width: none;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  form,
+  .content {
+    width: 100%;
+  }
+
+  .btn {
+    flex-direction: column;
+  }
+  .image {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 425px) {
+  form {
+    padding: 20px;
+  }
 }
