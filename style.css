@@ -1,3 +1,22 @@
+/**
+* ! changing default styles of brower
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -91,6 +110,19 @@ button:hover {
   gap: 15px;
 }
 
+.or {
+  text-align: center;
+}
+
+.question {
+  font-size: 15px;
+}
+
+span {
+  color: #f2796e;
+  cursor: pointer;
+}
+
 .btn-1,
 .btn-2 {
   padding: 10px 5px;
@@ -103,4 +135,9 @@ button:hover {
   border-radius: 8px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+
+.btn-2 {
+  background-color: #4f70b5;
+  color: white;
 }
